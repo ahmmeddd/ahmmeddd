@@ -1,6 +1,6 @@
-# 👋 Welcome to My GitHub Profile
+# 👋 Hello World I'm Ahmed
 
-Hello! I'm a PHP, Laravel, C++, and Go enthusiast from Sialkot. My primary goal is to leverage my expertise for maximum exposure in this competitive community. I am highly motivated and ready to tackle any challenge that comes my way.
+A PHP, Laravel, C++, and Go enthusiast from Sialkot. My primary goal is to leverage my expertise for maximum exposure in this competitive community. I am highly motivated and ready to tackle any challenge that comes my way.
 
 ## 🌟 About Me
 
@@ -41,7 +41,7 @@ Feel free to reach out to me via GitHub issues or through my email at ahmed72446
 
 Thank you for visiting my GitHub profile! Let's code and create amazing things together.
 
-![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmmeddd&show_icons=true&theme=radical)
+![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmmeddd&show_icons=false&theme=radical)
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmmeddd&theme=radical)
 
 ---
