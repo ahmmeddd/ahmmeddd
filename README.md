@@ -13,7 +13,6 @@ Hello! I'm a PHP, Laravel, C++, and Go enthusiast from Sialkot. My primary goal 
 
 [![](https://img.shields.io/badge/PHP-Web%20Development-blue?style=for-the-badge&logo=php)]()
 [![](https://img.shields.io/badge/Laravel-Web%20Framework-red?style=for-the-badge&logo=laravel)]()
-
 [![](https://img.shields.io/badge/C%2B%2B-Programming-brightgreen?style=for-the-badge&logo=c%2B%2B)]()
 [![](https://img.shields.io/badge/Go-Programming-yellow?style=for-the-badge&logo=go)]()
 
@@ -43,6 +42,9 @@ Feel free to reach out to me via GitHub issues or through my email at ahmed72446
 Thank you for visiting my GitHub profile! Let's code and create amazing things together.
 
 ![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmmeddd&show_icons=true&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ahmmeddd&layout=compact&theme=radical)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmmeddd&theme=radical)
+![Trophies](https://github-profile-trophy.vercel.app/?username=ahmmeddd&theme=radical)
 
 ---
 
