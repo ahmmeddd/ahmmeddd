@@ -1,4 +1,4 @@
-# 👋 Hello World I'm Ahmed
+# 👋 Hello World! I'm Ahmed.
 
 A PHP, Laravel, C++, and Go enthusiast from Sialkot. My primary goal is to leverage my expertise for maximum exposure in this competitive community. I am highly motivated and ready to tackle any challenge that comes my way.
 
