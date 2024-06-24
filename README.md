@@ -41,7 +41,7 @@ Feel free to reach out to me via GitHub issues or through my email at ahmed72446
 
 Thank you for visiting my GitHub profile! Let's code and create amazing things together.
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
+<div style="display: flex; justify-content: space-between;">
   <img src="https://github-readme-stats.vercel.app/api?username=ahmmeddd&show_icons=true&theme=radical" alt="Your GitHub stats" style="height: 200px; width: auto;" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ahmmeddd&theme=radical" alt="GitHub Streak" style="height: 200px; width: auto;" />
 </div>
