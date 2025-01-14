@@ -15,10 +15,7 @@ A passionate **Software Engineer** specializing in **PHP**, **Laravel**, **C++**
 
 ## 💻 Technologies & Skills
 
-[![PHP](https://img.shields.io/badge/PHP-Web%20Development-blue?style=for-the-badge&logo=php)]() 
-[![Laravel](https://img.shields.io/badge/Laravel-Web%20Framework-red?style=for-the-badge&logo=laravel)]() 
-[![C++](https://img.shields.io/badge/C++-Programming-brightgreen?style=for-the-badge&logo=cplusplus)]() 
-[![Go](https://img.shields.io/badge/Go-Programming-yellow?style=for-the-badge&logo=go)]()
+[![PHP](https://img.shields.io/badge/PHP-Web%20Development-blue?style=for-the-badge&logo=php)]() [![Laravel](https://img.shields.io/badge/Laravel-Web%20Framework-red?style=for-the-badge&logo=laravel)]() [![C++](https://img.shields.io/badge/C++-Programming-brightgreen?style=for-the-badge&logo=cplusplus)]() [![Go](https://img.shields.io/badge/Go-Programming-yellow?style=for-the-badge&logo=go)]() ![Git](https://img.shields.io/badge/Git-Version%20Control-orange?style=for-the-badge&logo=git) ![REST API](https://img.shields.io/badge/REST%20API-Integration-lightgrey?style=for-the-badge&logo=api)
 
 ---
 
@@ -40,7 +37,7 @@ A passionate **Software Engineer** specializing in **PHP**, **Laravel**, **C++**
 
 ## 🌐 Connect with Me
 
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/ahmmeddd) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/ahmed-hassan-23b59b279/) 
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/ahmmeddd) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/ahmed-hassan-23b59b279/) [![Gmail](https://img.shields.io/badge/Gmail-Contact-red?style=for-the-badge&logo=gmail)](mailto:ahmed724462@gmail.com)
 
 ---
 
@@ -49,6 +46,8 @@ A passionate **Software Engineer** specializing in **PHP**, **Laravel**, **C++**
 Feel free to reach out to me via GitHub issues or through my email at **ahmed724462@gmail.com**. I'm always open to discussions, collaborations, and new opportunities.
 
 ---
+
+## 📊 GitHub Stats
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github-readme-stats.vercel.app/api?username=ahmmeddd&show_icons=true&theme=radical" alt="Your GitHub stats" style="height: 200px; width: 48%;" />
