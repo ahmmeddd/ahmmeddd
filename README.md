@@ -13,22 +13,12 @@ A passionate **Software Engineer** specializing in **PHP**, **Laravel**, **C++**
 
 ---
 
-## 📂 Table of Contents
-- [About Me](#-about-me)
-- [Technologies & Skills](#-technologies--skills)
-- [What I'm Working On](#-what-im-working-on)
-- [Goals](#-goals)
-- [Connect with Me](#-connect-with-me)
-- [How to Reach Me](#-how-to-reach-me)
-
----
-
 ## 💻 Technologies & Skills
 
-[![PHP](https://img.shields.io/badge/PHP-Web%20Development-blue?style=for-the-badge&logo=php)]()  
-[![Laravel](https://img.shields.io/badge/Laravel-Web%20Framework-red?style=for-the-badge&logo=laravel)]()  
-[![C++](https://img.shields.io/badge/C++-Programming-brightgreen?style=for-the-badge&logo=cplusplus)]()  
-[![Go](https://img.shields.io/badge/Go-Programming-yellow?style=for-the-badge&logo=go)]()  
+[![PHP](https://img.shields.io/badge/PHP-Web%20Development-blue?style=for-the-badge&logo=php)]() 
+[![Laravel](https://img.shields.io/badge/Laravel-Web%20Framework-red?style=for-the-badge&logo=laravel)]() 
+[![C++](https://img.shields.io/badge/C++-Programming-brightgreen?style=for-the-badge&logo=cplusplus)]() 
+[![Go](https://img.shields.io/badge/Go-Programming-yellow?style=for-the-badge&logo=go)]()
 
 ---
 
@@ -50,8 +40,7 @@ A passionate **Software Engineer** specializing in **PHP**, **Laravel**, **C++**
 
 ## 🌐 Connect with Me
 
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/ahmmeddd)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/ahmed-hassan-23b59b279/)  
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/ahmmeddd) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/ahmed-hassan-23b59b279/)  
 
 ---
 
