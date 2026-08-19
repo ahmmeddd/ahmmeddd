@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="760" viewBox="0 0 720 760" role="img" aria-labelledby="title description">
+  <title id="title">Ahmed Hassan — Software Engineer</title>
+  <desc id="description">Mobile animated developer profile banner with terminal and orbiting code symbol.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080d18"/>
+      <stop offset="0.6" stop-color="#070b14"/>
+      <stop offset="1" stop-color="#0a1020"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#25304a"/>
+      <stop offset="0.5" stop-color="#2f6bff"/>
+      <stop offset="0.75" stop-color="#b8f116"/>
+      <stop offset="1" stop-color="#25304a"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f6bff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#2f6bff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#2f6bff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="lineOne"><rect class="type-one" x="86" y="641" width="480" height="24"/></clipPath>
+    <clipPath id="lineTwo"><rect class="type-two" x="86" y="675" width="455" height="24"/></clipPath>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+      .orbit { transform-origin: 360px 436px; animation: orbit 17s linear infinite; }
+      .reverse { transform-origin: 360px 436px; animation: reverse 11s linear infinite; }
+      .pulse { animation: pulse 2.8s ease-in-out infinite; }
+      .cursor { animation: blink 1s steps(1,end) infinite; }
+      .scan { animation: scan 7s ease-in-out infinite; }
+      .type-one, .type-two { transform-box: fill-box; transform-origin: left center; }
+      .type-one { animation: type-one 5s steps(34,end) infinite; }
+      .type-two { animation: type-two 5s steps(35,end) infinite; }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+      @keyframes reverse { to { transform: rotate(-360deg); } }
+      @keyframes pulse { 0%,100% { opacity: .72; } 50% { opacity: 1; } }
+      @keyframes blink { 0%,48% { opacity: 1; } 49%,100% { opacity: 0; } }
+      @keyframes scan { 0%,18% { transform: translateY(-100px); opacity: 0; } 34%,68% { opacity: .7; } 82%,100% { transform: translateY(760px); opacity: 0; } }
+      @keyframes type-one { 0% { transform: scaleX(0); } 42%,100% { transform: scaleX(1); } }
+      @keyframes type-two { 0%,48% { transform: scaleX(0); } 86%,100% { transform: scaleX(1); } }
+      @media (prefers-reduced-motion: reduce) {
+        .orbit, .reverse, .pulse, .cursor, .scan, .type-one, .type-two { animation: none; }
+        .type-one, .type-two { transform: scaleX(1); }
+        .scan { display: none; }
+      }
+    </style>
+  </defs>
+
+  <rect width="720" height="760" rx="28" fill="url(#background)"/>
+  <rect x="1" y="1" width="718" height="758" rx="27" fill="none" stroke="#29334a" stroke-width="2"/>
+  <path d="M28 1h664" stroke="url(#edge)" stroke-width="2"/>
+
+  <g class="sans">
+    <g transform="translate(44 38)">
+      <rect width="46" height="46" rx="13" fill="#b8f116"/>
+      <text x="23" y="30" text-anchor="middle" fill="#07100d" font-size="17" font-weight="800">AH</text>
+      <text x="62" y="20" fill="#f5f7fb" font-size="15" font-weight="700">Ahmed Hassan</text>
+      <text x="62" y="40" class="mono" fill="#8d98ad" font-size="11">software engineer</text>
+    </g>
+
+    <text x="44" y="157" fill="#f5f7fb" font-size="55" font-weight="760" letter-spacing="-2.5">Ahmed Hassan</text>
+    <text x="45" y="202" fill="#2f6bff" font-size="29" font-weight="680">Software Engineer</text>
+    <path d="M45 229H639" stroke="#2f6bff" stroke-width="2"/>
+    <circle cx="643" cy="229" r="5" fill="#b8f116" filter="url(#softGlow)"/>
+    <text x="45" y="272" fill="#dce2ec" font-size="20">I build reliable web platforms and</text>
+    <text x="45" y="301" fill="#dce2ec" font-size="20">performance-minded systems.</text>
+    <g transform="translate(45 328)">
+      <path d="M8 0a8 8 0 0 0-8 8c0 6 8 14 8 14s8-8 8-14a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="#b8f116"/>
+      <text x="29" y="16" class="mono" fill="#8d98ad" font-size="15">Sialkot, Pakistan</text>
+    </g>
+  </g>
+
+  <g>
+    <circle cx="360" cy="436" r="101" fill="none" stroke="#2a3449" stroke-width="1.4" stroke-dasharray="5 8"/>
+    <circle cx="360" cy="436" r="60" fill="none" stroke="#202c43" stroke-width="1.2" stroke-dasharray="3 7"/>
+    <g class="orbit">
+      <ellipse cx="360" cy="436" rx="94" ry="46" fill="none" stroke="#b8f116" stroke-width="1.8" stroke-dasharray="7 6"/>
+      <g class="pulse" filter="url(#softGlow)">
+        <circle cx="454" cy="436" r="11" fill="#07100d" stroke="#b8f116" stroke-width="2"/>
+        <circle cx="454" cy="436" r="5" fill="#b8f116"/>
+      </g>
+    </g>
+    <g class="reverse">
+      <circle cx="360" cy="335" r="5" fill="#2f6bff"/>
+      <circle cx="360" cy="335" r="11" fill="none" stroke="#2f6bff" stroke-opacity="0.42"/>
+    </g>
+    <text x="360" y="451" class="mono" text-anchor="middle" fill="#2f6bff" font-size="48" font-weight="800" letter-spacing="-4" filter="url(#softGlow)">&lt;/&gt;</text>
+  </g>
+
+  <g>
+    <rect x="44" y="572" width="632" height="143" rx="16" fill="#0a101c" stroke="#2b354a"/>
+    <circle cx="67" cy="596" r="4" fill="#b8f116"/>
+    <circle cx="83" cy="596" r="4" fill="#2f6bff"/>
+    <circle cx="99" cy="596" r="4" fill="#536078"/>
+    <path d="M44 618H676" stroke="#202a3d"/>
+    <g class="mono" font-size="15">
+      <text x="65" y="654" fill="#b8f116">$</text>
+      <text x="86" y="654" fill="#c5ccd8" clip-path="url(#lineOne)">engineer --build --optimize --ship</text>
+      <text x="65" y="688" fill="#2f6bff">›</text>
+      <text x="86" y="688" fill="#8793a8" clip-path="url(#lineTwo)">solving problems with thoughtful code</text>
+      <rect class="cursor" x="564" y="673" width="8" height="18" rx="1" fill="#b8f116"/>
+    </g>
+  </g>
+
+  <rect class="scan" x="2" y="-92" width="716" height="92" rx="26" fill="url(#scan)" pointer-events="none"/>
+</svg>
