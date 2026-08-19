@@ -1,0 +1,287 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1700" viewBox="0 0 1000 1700" role="img" aria-labelledby="title desc">
+  <title id="title">Ahmed Hassan — animated software engineering profile dashboard</title>
+  <desc id="desc">A dark developer command center with animated code, truthful workstream data, technology cards, current focus, workflow activity, and contact details.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050810"/>
+      <stop offset="0.55" stop-color="#07101a"/>
+      <stop offset="1" stop-color="#05080f"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09121e"/>
+      <stop offset="1" stop-color="#07101a"/>
+    </linearGradient>
+    <linearGradient id="blueLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a2637"/>
+      <stop offset="0.55" stop-color="#168cff"/>
+      <stop offset="1" stop-color="#1a2637"/>
+    </linearGradient>
+    <linearGradient id="limeLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#182536"/>
+      <stop offset="0.5" stop-color="#b7ff00"/>
+      <stop offset="1" stop-color="#182536"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#168cff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#168cff" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#168cff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#112033" stroke-width="1"/>
+    </pattern>
+    <clipPath id="editorClip"><rect x="29" y="170" width="608" height="450" rx="0"/></clipPath>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+      .card { fill: url(#panel); stroke: #26364a; stroke-width: 1.5; }
+      .card-title { font-size: 16px; font-weight: 700; letter-spacing: .8px; }
+      .muted { fill: #8290a6; }
+      .soft { fill: #b8c2d1; }
+      .lime { fill: #b7ff00; }
+      .blue { fill: #168cff; }
+      .rule { stroke: #203047; stroke-width: 1; }
+      .cursor { animation: blink 1s steps(1,end) infinite; }
+      .status-dot { transform-box: fill-box; transform-origin: center; animation: pulse 2.2s ease-in-out infinite; }
+      .status-dot.d2 { animation-delay: .45s; }
+      .status-dot.d3 { animation-delay: .9s; }
+      .status-dot.d4 { animation-delay: 1.35s; }
+      .code-line { opacity: 0; animation: code-in 9s ease infinite; animation-delay: calc(var(--i) * .18s); }
+      .editor-highlight { animation: highlight 7s steps(1,end) infinite; }
+      .scan { animation: scan-down 7s linear infinite; }
+      .flow { stroke-dasharray: 8 8; animation: flow 1.2s linear infinite; }
+      .bar-fill { transform-box: fill-box; transform-origin: left center; animation: grow 3.8s cubic-bezier(.4,0,.2,1) infinite; animation-delay: var(--d); }
+      .cell { animation: cell 3.4s ease-in-out infinite; animation-delay: var(--d); }
+      .heartbeat { stroke-dasharray: 380; stroke-dashoffset: 380; animation: heartbeat 4s linear infinite; }
+      .terminal-line { opacity: 0; animation: terminal 6s steps(1,end) infinite; animation-delay: var(--d); }
+      .node { transform-box: fill-box; transform-origin: center; animation: node 3s ease-in-out infinite; animation-delay: var(--d); }
+      .top-stream { animation: stream 8s linear infinite; }
+      @keyframes blink { 0%,48% { opacity:1 } 49%,100% { opacity:0 } }
+      @keyframes pulse { 0%,100% { opacity:.5; transform:scale(.82) } 50% { opacity:1; transform:scale(1) } }
+      @keyframes code-in { 0%,4% { opacity:0; transform:translateX(-8px) } 11%,90% { opacity:1; transform:none } 97%,100% { opacity:0 } }
+      @keyframes highlight { 0%,16% { transform:translateY(0) } 28% { transform:translateY(128px) } 44% { transform:translateY(224px) } 62% { transform:translateY(288px) } 78%,100% { transform:translateY(352px) } }
+      @keyframes scan-down { 0% { transform:translateY(-60px); opacity:0 } 12% { opacity:1 } 85% { opacity:.6 } 100% { transform:translateY(520px); opacity:0 } }
+      @keyframes flow { to { stroke-dashoffset:-16 } }
+      @keyframes grow { 0%,12% { transform:scaleX(.08) } 48%,88% { transform:scaleX(1) } 100% { transform:scaleX(.08) } }
+      @keyframes cell { 0%,100% { opacity:.18 } 48% { opacity:1 } }
+      @keyframes heartbeat { 0% { stroke-dashoffset:380 } 55%,100% { stroke-dashoffset:0 } }
+      @keyframes terminal { 0%,12% { opacity:0 } 20%,88% { opacity:1 } 100% { opacity:0 } }
+      @keyframes node { 0%,100% { opacity:.52; transform:scale(.9) } 50% { opacity:1; transform:scale(1.08) } }
+      @keyframes stream { from { transform:translateX(-160px) } to { transform:translateX(1040px) } }
+      @media (prefers-reduced-motion: reduce) {
+        .cursor,.status-dot,.code-line,.editor-highlight,.scan,.flow,.bar-fill,.cell,.heartbeat,.terminal-line,.node,.top-stream { animation:none; }
+        .code-line,.terminal-line { opacity:1; }
+        .bar-fill { transform:scaleX(1); }
+        .cell { opacity:.75; }
+        .scan { display:none; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1700" rx="24" fill="url(#bg)"/>
+  <rect x="1" y="1" width="998" height="1698" rx="23" fill="none" stroke="#2a3b50" stroke-width="2"/>
+  <path d="M25 1H975" stroke="url(#limeLine)" stroke-width="2"/>
+  <rect x="1" y="1" width="998" height="1698" rx="23" fill="url(#grid)" opacity=".18"/>
+
+  <g class="top-stream" opacity=".72">
+    <rect x="0" y="109" width="70" height="2" fill="#b7ff00"/>
+    <rect x="82" y="109" width="22" height="2" fill="#168cff"/>
+    <rect x="114" y="109" width="9" height="2" fill="#b7ff00"/>
+  </g>
+
+  <!-- Header -->
+  <g class="sans">
+    <text x="31" y="72" fill="#f4f7fb" font-size="48" font-weight="760" letter-spacing="-2">Ahmed <tspan fill="#b7ff00">Hassan</tspan></text>
+    <text x="32" y="108" fill="#168cff" font-size="25" font-weight="650">Software Engineer</text>
+    <rect class="cursor" x="254" y="85" width="6" height="28" rx="1" fill="#168cff"/>
+  </g>
+  <g class="mono" font-size="14">
+    <g transform="translate(715 40)">
+      <path d="M8 0a8 8 0 0 0-8 8c0 6 8 14 8 14s8-8 8-14a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="#b7ff00"/>
+      <text x="28" y="16" fill="#c7cfdb">Sialkot, Pakistan</text>
+    </g>
+    <text x="715" y="98" fill="#b7ff00">&gt;_</text>
+    <text x="751" y="98" fill="#8794a8">build / optimize / ship</text>
+  </g>
+
+  <!-- Code editor -->
+  <rect x="28" y="128" width="610" height="500" rx="16" class="card"/>
+  <path d="M28 174H638" class="rule"/>
+  <circle cx="51" cy="151" r="5" fill="#ff5f57"/>
+  <circle cx="68" cy="151" r="5" fill="#febc2e"/>
+  <circle cx="85" cy="151" r="5" fill="#28c840"/>
+  <text x="119" y="157" class="mono blue" font-size="14">engineer.profile.js</text>
+  <text x="282" y="157" class="mono lime" font-size="17">×</text>
+  <path d="M308 128V174" class="rule"/>
+  <text x="330" y="157" class="mono muted" font-size="18">+</text>
+  <text x="599" y="157" class="mono muted" font-size="13">{ }</text>
+  <rect x="29" y="174" width="608" height="450" fill="#060d16" opacity=".62"/>
+  <rect class="editor-highlight" x="29" y="196" width="608" height="29" fill="#102a43" opacity=".72" clip-path="url(#editorClip)"/>
+  <rect class="scan" x="29" y="170" width="608" height="58" fill="url(#scan)" clip-path="url(#editorClip)"/>
+
+  <g class="mono" font-size="14.2">
+    <g fill="#52627a" text-anchor="end">
+      <text x="64" y="211">01</text><text x="64" y="240">02</text><text x="64" y="269">03</text><text x="64" y="298">04</text>
+      <text x="64" y="327">05</text><text x="64" y="356">06</text><text x="64" y="385">07</text><text x="64" y="414">08</text>
+      <text x="64" y="443">09</text><text x="64" y="472">10</text><text x="64" y="501">11</text><text x="64" y="530">12</text>
+      <text x="64" y="559">13</text><text x="64" y="588">14</text>
+    </g>
+    <g transform="translate(82 0)">
+      <text y="211"><tspan fill="#48b8ff">const</tspan><tspan fill="#f5f7fb"> engineer = {</tspan></text>
+      <text class="code-line" style="--i:1" y="240"><tspan fill="#85cfff">  name:</tspan><tspan fill="#b7ff00"> "Ahmed Hassan",</tspan></text>
+      <text class="code-line" style="--i:2" y="269"><tspan fill="#85cfff">  role:</tspan><tspan fill="#b7ff00"> "Software Engineer",</tspan></text>
+      <text class="code-line" style="--i:3" y="298"><tspan fill="#85cfff">  location:</tspan><tspan fill="#b7ff00"> "Sialkot, Pakistan",</tspan></text>
+      <text class="code-line" style="--i:4" y="327"><tspan fill="#85cfff">  mode:</tspan><tspan fill="#b7ff00"> "build / optimize / ship",</tspan></text>
+      <text class="code-line" style="--i:5" y="356" fill="#8794a8"> </text>
+      <text class="code-line" style="--i:6" y="385"><tspan fill="#85cfff">  core:</tspan><tspan fill="#f0a7ff"> [</tspan><tspan fill="#b7ff00">"PHP", "Laravel", "Go", "C++"</tspan><tspan fill="#f0a7ff">],</tspan></text>
+      <text class="code-line" style="--i:7" y="414"><tspan fill="#85cfff">  about:</tspan><tspan fill="#b7ff00"> "I build reliable platforms",</tspan></text>
+      <text class="code-line" style="--i:8" y="443"><tspan fill="#85cfff">  focus:</tspan><tspan fill="#f0a7ff"> [</tspan></text>
+      <text class="code-line" style="--i:9" y="472" fill="#b7ff00">    "Laravel web systems",</text>
+      <text class="code-line" style="--i:10" y="501" fill="#b7ff00">    "Go concurrency &amp; services",</text>
+      <text class="code-line" style="--i:11" y="530" fill="#b7ff00">    "C++ performance systems"</text>
+      <text class="code-line" style="--i:12" y="559"><tspan fill="#f0a7ff">  ]</tspan></text>
+      <text class="code-line" style="--i:13" y="588" fill="#f5f7fb">};</text>
+    </g>
+  </g>
+  <path d="M28 600H638" class="rule"/>
+  <rect x="42" y="608" width="58" height="14" rx="3" fill="#1469b8"/>
+  <text x="71" y="619" class="mono" text-anchor="middle" fill="#eef7ff" font-size="9">NORMAL</text>
+  <text x="112" y="619" class="mono muted" font-size="10">engineer.profile.js</text>
+  <text x="509" y="619" class="mono muted" font-size="10">JavaScript</text>
+
+  <!-- Status panel -->
+  <rect x="654" y="128" width="318" height="500" rx="16" class="card"/>
+  <path d="M654 174H972" class="rule"/>
+  <text x="676" y="157" class="mono lime card-title">&gt;_ system.status</text>
+  <circle cx="947" cy="151" r="5" fill="#b7ff00" class="status-dot" filter="url(#glow)"/>
+  <text x="676" y="203" class="mono blue" font-size="12">WORKSTREAMS</text>
+  <g class="mono" font-size="12">
+    <g transform="translate(676 222)">
+      <rect width="274" height="54" rx="8" fill="#07101a" stroke="#1c2b3f"/>
+      <rect x="11" y="12" width="30" height="30" rx="7" fill="#0a1928" stroke="#174469"/>
+      <text x="26" y="32" text-anchor="middle" fill="#168cff" font-size="13">{ }</text>
+      <text x="52" y="25" fill="#e6ebf2">Laravel platforms</text>
+      <text x="52" y="42" fill="#8290a6" font-size="10">building dependable web systems</text>
+      <circle cx="258" cy="27" r="4" fill="#b7ff00" class="status-dot"/>
+    </g>
+    <g transform="translate(676 285)">
+      <rect width="274" height="54" rx="8" fill="#07101a" stroke="#1c2b3f"/>
+      <rect x="11" y="12" width="30" height="30" rx="7" fill="#0a1928" stroke="#174469"/>
+      <text x="26" y="32" text-anchor="middle" fill="#25c7e8" font-size="12">GO</text>
+      <text x="52" y="25" fill="#e6ebf2">Go services</text>
+      <text x="52" y="42" fill="#8290a6" font-size="10">exploring concurrency &amp; design</text>
+      <circle cx="258" cy="27" r="4" fill="#b7ff00" class="status-dot d2"/>
+    </g>
+    <g transform="translate(676 348)">
+      <rect width="274" height="54" rx="8" fill="#07101a" stroke="#1c2b3f"/>
+      <rect x="11" y="12" width="30" height="30" rx="7" fill="#0a1928" stroke="#174469"/>
+      <text x="26" y="32" text-anchor="middle" fill="#73b7ff" font-size="11">C++</text>
+      <text x="52" y="25" fill="#e6ebf2">Performance systems</text>
+      <text x="52" y="42" fill="#8290a6" font-size="10">crafting with C++</text>
+      <circle cx="258" cy="27" r="4" fill="#b7ff00" class="status-dot d3"/>
+    </g>
+  </g>
+  <text x="676" y="435" class="mono blue" font-size="12">TERMINAL</text>
+  <rect x="676" y="451" width="274" height="100" rx="9" fill="#050b12" stroke="#27384d"/>
+  <g class="mono" font-size="11.5">
+    <text x="690" y="475" fill="#b7ff00">$ engineer --status</text>
+    <text class="terminal-line" style="--d:.5s" x="690" y="496" fill="#c4cbd6">› focus loaded</text>
+    <text class="terminal-line" style="--d:1s" x="690" y="517" fill="#c4cbd6">› toolchain ready</text>
+    <text class="terminal-line" style="--d:1.5s" x="690" y="538" fill="#c4cbd6">› shipping quality code</text>
+    <rect class="cursor" x="862" y="525" width="7" height="15" fill="#b7ff00"/>
+  </g>
+  <text x="676" y="577" class="mono blue" font-size="12">SYSTEM SIGNAL</text>
+  <path d="M677 601h16l7-18 9 29 8-17 8 7 11-2 9-13 9 22 8-11 9 6 9-13 10 9 11-3 9 8 9-16 11 17 10-7 11 2 10-10 9 13 13-5 8 2" fill="none" stroke="#b7ff00" stroke-width="1.8" class="heartbeat"/>
+  <circle cx="947" cy="601" r="4" fill="#b7ff00" class="status-dot" filter="url(#glow)"/>
+
+  <!-- About -->
+  <rect x="28" y="648" width="944" height="170" rx="16" class="card"/>
+  <text x="60" y="683" class="mono lime card-title">ABOUT</text>
+  <path d="M126 677H717" stroke="url(#blueLine)"/>
+  <g transform="translate(54 705)">
+    <path d="M38 0 71 19v39L38 78 5 59V20Z" fill="#07111c" stroke="#b7ff00" stroke-width="2"/>
+    <text x="38" y="49" text-anchor="middle" class="mono lime" font-size="23" font-weight="700">&lt;/&gt;</text>
+  </g>
+  <g class="sans" font-size="15" fill="#c7cfdb">
+    <text x="154" y="718">I turn complex requirements into dependable, maintainable products.</text>
+    <text x="154" y="746">My core work lives in PHP and Laravel, while C++ and Go sharpen how I think</text>
+    <text x="154" y="774">about performance, concurrency, systems design, and clear architecture.</text>
+    <text x="154" y="798" class="mono" fill="#8290a6" font-size="12">software that remains pleasant to work on after it ships.</text>
+  </g>
+  <g opacity=".72">
+    <circle cx="844" cy="726" r="8" fill="none" stroke="#168cff" class="node" style="--d:0s"/>
+    <circle cx="902" cy="695" r="6" fill="none" stroke="#b7ff00" class="node" style="--d:.5s"/>
+    <circle cx="925" cy="773" r="9" fill="none" stroke="#168cff" class="node" style="--d:1s"/>
+    <path d="M844 726 902 695 925 773 844 726" fill="none" stroke="#23405e" class="flow"/>
+  </g>
+
+  <!-- Toolbox -->
+  <rect x="28" y="838" width="944" height="164" rx="16" class="card"/>
+  <text x="55" y="873" class="mono blue card-title">&gt;_ TOOLBOX</text>
+  <path d="M176 867H944" stroke="url(#limeLine)"/>
+  <g class="mono" font-size="14" font-weight="700">
+    <g transform="translate(51 894)"><rect width="137" height="78" rx="10" fill="#07101a" stroke="#30415a"/><circle cx="25" cy="25" r="14" fill="#7652cb"/><text x="25" y="30" text-anchor="middle" fill="white" font-size="9">php</text><text x="48" y="30" fill="#e9edf4">PHP</text><rect x="15" y="57" width="107" height="4" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:0s" x="15" y="57" width="76" height="4" rx="2" fill="#9d65ff"/></g>
+    <g transform="translate(203 894)"><rect width="137" height="78" rx="10" fill="#07101a" stroke="#30415a"/><circle cx="25" cy="25" r="14" fill="#351315" stroke="#ff3c2f"/><text x="25" y="30" text-anchor="middle" fill="#ff4e40" font-size="11">L</text><text x="48" y="30" fill="#e9edf4">LARAVEL</text><rect x="15" y="57" width="107" height="4" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:.2s" x="15" y="57" width="91" height="4" rx="2" fill="#ff453a"/></g>
+    <g transform="translate(355 894)"><rect width="137" height="78" rx="10" fill="#07101a" stroke="#30415a"/><circle cx="25" cy="25" r="14" fill="#092b34"/><text x="25" y="30" text-anchor="middle" fill="#25c7e8" font-size="10">GO</text><text x="48" y="30" fill="#e9edf4">GO</text><rect x="15" y="57" width="107" height="4" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:.4s" x="15" y="57" width="69" height="4" rx="2" fill="#25c7e8"/></g>
+    <g transform="translate(507 894)"><rect width="137" height="78" rx="10" fill="#07101a" stroke="#30415a"/><circle cx="25" cy="25" r="14" fill="#0e2d4d"/><text x="25" y="30" text-anchor="middle" fill="#72b8ff" font-size="9">C++</text><text x="48" y="30" fill="#e9edf4">C++</text><rect x="15" y="57" width="107" height="4" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:.6s" x="15" y="57" width="82" height="4" rx="2" fill="#68adf5"/></g>
+    <g transform="translate(659 894)"><rect width="137" height="78" rx="10" fill="#07101a" stroke="#30415a"/><circle cx="25" cy="25" r="14" fill="#3a1d14"/><text x="25" y="30" text-anchor="middle" fill="#f05032" font-size="10">◆</text><text x="48" y="30" fill="#e9edf4">GIT</text><rect x="15" y="57" width="107" height="4" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:.8s" x="15" y="57" width="88" height="4" rx="2" fill="#f05032"/></g>
+    <g transform="translate(811 894)"><rect width="137" height="78" rx="10" fill="#07101a" stroke="#30415a"/><circle cx="25" cy="25" r="14" fill="#1d2f0b"/><text x="25" y="30" text-anchor="middle" fill="#b7ff00" font-size="10">↯</text><text x="48" y="30" fill="#e9edf4">REST</text><rect x="15" y="57" width="107" height="4" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:1s" x="15" y="57" width="73" height="4" rx="2" fill="#b7ff00"/></g>
+  </g>
+
+  <!-- Current focus -->
+  <rect x="28" y="1022" width="944" height="240" rx="16" class="card"/>
+  <text x="55" y="1057" class="mono lime card-title">CURRENT FOCUS</text>
+  <path d="M196 1051H944" stroke="url(#blueLine)"/>
+  <g class="mono">
+    <g transform="translate(51 1082)"><rect width="202" height="145" rx="11" fill="#07101a" stroke="#425627"/><circle cx="24" cy="24" r="14" fill="#182509" stroke="#b7ff00"/><text x="24" y="29" text-anchor="middle" fill="#b7ff00" font-size="10">01</text><text x="48" y="27" fill="#e7ecf3" font-size="12">BUILDING</text><text x="18" y="62" fill="#b8c2d1" font-size="12">Robust web platforms</text><text x="18" y="83" fill="#b8c2d1" font-size="12">with PHP and Laravel</text><rect x="18" y="116" width="165" height="5" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:0s" x="18" y="116" width="119" height="5" rx="2" fill="#b7ff00"/></g>
+    <path d="M262 1154H282" stroke="#b7ff00" stroke-width="2" class="flow"/><path d="m278 1148 7 6-7 6" fill="none" stroke="#b7ff00" stroke-width="2"/>
+    <g transform="translate(288 1082)"><rect width="202" height="145" rx="11" fill="#07101a" stroke="#314257"/><circle cx="24" cy="24" r="14" fill="#0a2330" stroke="#25c7e8"/><text x="24" y="29" text-anchor="middle" fill="#25c7e8" font-size="10">02</text><text x="48" y="27" fill="#e7ecf3" font-size="12">EXPLORING</text><text x="18" y="62" fill="#b8c2d1" font-size="12">Concurrency and service</text><text x="18" y="83" fill="#b8c2d1" font-size="12">design with Go</text><rect x="18" y="116" width="165" height="5" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:.25s" x="18" y="116" width="103" height="5" rx="2" fill="#25c7e8"/></g>
+    <path d="M499 1154H519" stroke="#b7ff00" stroke-width="2" class="flow"/><path d="m515 1148 7 6-7 6" fill="none" stroke="#b7ff00" stroke-width="2"/>
+    <g transform="translate(525 1082)"><rect width="202" height="145" rx="11" fill="#07101a" stroke="#314257"/><circle cx="24" cy="24" r="14" fill="#0e253d" stroke="#68adf5"/><text x="24" y="29" text-anchor="middle" fill="#68adf5" font-size="10">03</text><text x="48" y="27" fill="#e7ecf3" font-size="12">CRAFTING</text><text x="18" y="62" fill="#b8c2d1" font-size="12">Performance-minded</text><text x="18" y="83" fill="#b8c2d1" font-size="12">systems with C++</text><rect x="18" y="116" width="165" height="5" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:.5s" x="18" y="116" width="111" height="5" rx="2" fill="#68adf5"/></g>
+    <path d="M736 1154H756" stroke="#b7ff00" stroke-width="2" class="flow"/><path d="m752 1148 7 6-7 6" fill="none" stroke="#b7ff00" stroke-width="2"/>
+    <g transform="translate(762 1082)"><rect width="186" height="145" rx="11" fill="#07101a" stroke="#314257"/><circle cx="24" cy="24" r="14" fill="#172308" stroke="#b7ff00"/><text x="24" y="29" text-anchor="middle" fill="#b7ff00" font-size="10">04</text><text x="48" y="27" fill="#e7ecf3" font-size="12">LEARNING</text><text x="18" y="62" fill="#b8c2d1" font-size="12">Open source and</text><text x="18" y="83" fill="#b8c2d1" font-size="12">continuous improvement</text><rect x="18" y="116" width="150" height="5" rx="2" fill="#1b2738"/><rect class="bar-fill" style="--d:.75s" x="18" y="116" width="91" height="5" rx="2" fill="#b7ff00"/></g>
+  </g>
+
+  <!-- Workflow activity -->
+  <rect x="28" y="1282" width="944" height="206" rx="16" class="card"/>
+  <text x="55" y="1317" class="mono blue card-title">~ WORKFLOW ACTIVITY</text>
+  <path d="M248 1311H944" stroke="url(#limeLine)"/>
+  <g class="mono">
+    <text x="57" y="1351" fill="#8290a6" font-size="11">engineering.loop</text>
+    <text x="57" y="1382" fill="#f4f7fb" font-size="13">DESIGN</text><text x="57" y="1412" fill="#f4f7fb" font-size="13">BUILD</text><text x="57" y="1442" fill="#f4f7fb" font-size="13">REVIEW</text><text x="57" y="1472" fill="#f4f7fb" font-size="13">LEARN</text>
+    <g transform="translate(133 1368)">
+      <g fill="#b7ff00"><rect class="cell" style="--d:0s" width="18" height="14"/><rect class="cell" style="--d:.15s" x="25" width="18" height="14"/><rect class="cell" style="--d:.3s" x="50" width="18" height="14"/><rect class="cell" style="--d:.45s" x="75" width="18" height="14"/><rect class="cell" style="--d:.6s" x="100" width="18" height="14"/><rect class="cell" style="--d:.75s" x="125" width="18" height="14"/><rect class="cell" style="--d:.9s" x="150" width="18" height="14"/></g>
+      <g transform="translate(0 30)" fill="#168cff"><rect class="cell" style="--d:.3s" width="18" height="14"/><rect class="cell" style="--d:.45s" x="25" width="18" height="14"/><rect class="cell" style="--d:.6s" x="50" width="18" height="14"/><rect class="cell" style="--d:.75s" x="75" width="18" height="14"/><rect class="cell" style="--d:.9s" x="100" width="18" height="14"/><rect class="cell" style="--d:1.05s" x="125" width="18" height="14"/><rect class="cell" style="--d:1.2s" x="150" width="18" height="14"/></g>
+      <g transform="translate(0 60)" fill="#b7ff00"><rect class="cell" style="--d:.6s" width="18" height="14"/><rect class="cell" style="--d:.75s" x="25" width="18" height="14"/><rect class="cell" style="--d:.9s" x="50" width="18" height="14"/><rect class="cell" style="--d:1.05s" x="75" width="18" height="14"/><rect class="cell" style="--d:1.2s" x="100" width="18" height="14"/><rect class="cell" style="--d:1.35s" x="125" width="18" height="14"/><rect class="cell" style="--d:1.5s" x="150" width="18" height="14"/></g>
+      <g transform="translate(0 90)" fill="#168cff"><rect class="cell" style="--d:.9s" width="18" height="14"/><rect class="cell" style="--d:1.05s" x="25" width="18" height="14"/><rect class="cell" style="--d:1.2s" x="50" width="18" height="14"/><rect class="cell" style="--d:1.35s" x="75" width="18" height="14"/><rect class="cell" style="--d:1.5s" x="100" width="18" height="14"/><rect class="cell" style="--d:1.65s" x="125" width="18" height="14"/><rect class="cell" style="--d:1.8s" x="150" width="18" height="14"/></g>
+    </g>
+    <rect x="345" y="1341" width="250" height="120" rx="10" fill="#07101a" stroke="#24364b"/>
+    <text x="363" y="1369" fill="#168cff" font-size="12">principles.md</text>
+    <text x="363" y="1398" fill="#c7cfdb" font-size="12">01  clear architecture</text>
+    <text x="363" y="1422" fill="#c7cfdb" font-size="12">02  practical abstractions</text>
+    <text x="363" y="1446" fill="#c7cfdb" font-size="12">03  performance matters</text>
+    <rect x="615" y="1341" width="330" height="120" rx="10" fill="#050b12" stroke="#24364b"/>
+    <text x="633" y="1369" fill="#b7ff00" font-size="12">$ workflow --continuous</text>
+    <text x="633" y="1398" fill="#c7cfdb" font-size="12">› solve complex problems</text>
+    <text x="633" y="1422" fill="#c7cfdb" font-size="12">› ship maintainable systems</text>
+    <text x="633" y="1446" fill="#c7cfdb" font-size="12">› learn, improve, repeat</text>
+    <rect class="cursor" x="836" y="1432" width="7" height="16" fill="#b7ff00"/>
+  </g>
+
+  <!-- Connect -->
+  <rect x="28" y="1508" width="944" height="142" rx="16" class="card"/>
+  <text x="55" y="1543" class="mono lime card-title">CONNECT</text>
+  <path d="M135 1537H944" stroke="url(#blueLine)"/>
+  <g class="mono">
+    <g transform="translate(51 1564)"><rect width="205" height="58" rx="9" fill="#07101a" stroke="#168cff"/><circle cx="28" cy="29" r="13" fill="#e9edf4"/><text x="28" y="34" text-anchor="middle" fill="#07101a" font-size="13">GH</text><text x="52" y="25" fill="#f4f7fb" font-size="12" font-weight="700">GITHUB</text><text x="52" y="43" fill="#8290a6" font-size="10">github.com/ahmmeddd</text></g>
+    <g transform="translate(271 1564)"><rect width="257" height="58" rx="9" fill="#07101a" stroke="#168cff"/><rect x="15" y="16" width="25" height="25" rx="4" fill="#0a66c2"/><text x="27.5" y="34" text-anchor="middle" fill="white" font-size="14">in</text><text x="52" y="25" fill="#f4f7fb" font-size="12" font-weight="700">LINKEDIN</text><text x="52" y="43" fill="#8290a6" font-size="10">ahmed-hassan-23b59b279</text></g>
+    <g transform="translate(543 1564)"><rect width="401" height="58" rx="9" fill="#07101a" stroke="#b7ff00"/><path d="M16 18h28v21H16zM17 19l13 11 13-11" fill="none" stroke="#b7ff00" stroke-width="1.5"/><text x="56" y="25" fill="#f4f7fb" font-size="12" font-weight="700">EMAIL</text><text x="56" y="43" fill="#8290a6" font-size="10">ahmed724462@gmail.com</text><circle cx="377" cy="29" r="5" fill="#b7ff00" class="status-dot" filter="url(#glow)"/></g>
+  </g>
+
+  <path d="M28 1670H972" stroke="#213249" stroke-dasharray="3 5"/>
+  <text x="500" y="1688" class="mono" text-anchor="middle" fill="#8290a6" font-size="11"><tspan fill="#b7ff00">›</tspan> Build with care · Optimize with purpose · Ship what matters. <tspan fill="#168cff">‹</tspan></text>
+</svg>
